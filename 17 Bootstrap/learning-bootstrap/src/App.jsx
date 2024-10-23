@@ -1,44 +1,21 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+// import React from "react";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  let foodItems = ["Dal", "Green veg", "Milk", "Salad", "Fish oil"];
   return (
-    <div>
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="#">
-              Previous
-            </a>
+    // <React.Fragment>
+    <>
+      <h1>Healthy Food</h1>
+      <ul className="list-group">
+        {foodItems.map((item) => (
+          <li key={item} class="list-group-item">
+            {item}
           </li>
-          <li class="page-item">
-            <a class="page-link" href="#">
-              1
-            </a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">
-              2
-            </a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">
-              3
-            </a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">
-              Next
-            </a>
-          </li>
-        </ul>
-      </nav>
-      this is my divv
-    </div>
+        ))}
+      </ul>
+    </>
+    // </React.Fragment>
   );
 }
 
