@@ -1,5 +1,6 @@
 // import React from "react";
 import "./App.css";
+import Item from "./components/Item";
 
 function App() {
   let foodItems = ["Dal", "Green veg", "Milk", "Salad", "Fish oil"];
@@ -9,9 +10,7 @@ function App() {
       <h1>Healthy Food</h1>
       <ul className="list-group">
         {foodItems.map((item) => (
-          <li key={item} class="list-group-item">
-            {item}
-          </li>
+          <Item key={item} foodItem={item}></Item>
         ))}
       </ul>
     </>
